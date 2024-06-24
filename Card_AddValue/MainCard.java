@@ -14,31 +14,35 @@ public class MainCard {
         card3.id=103;
         card3.money =400;
 
+        //顯示card1~card3的id與money
+        card1.showInfo();
+        card2.showInfo();
+        card3.showInfo();
 
 
-        //IcCard myCards = {card1, card2, card3};
-        //建立myCards陣列，把card1~card3丟進去
+        System.out.println("========================");
+
+
+        //建立IcCard類別的myCards陣列，把card1~card3丟進去
         IcCard[] myCards = new IcCard[3];  // int[] bbb=new int[1];--->普通陣列
+
         myCards[0] = card1;
         myCards[1] = card2;
         myCards[2] = card3;
-
+        //亦同 ----> IcCard myCards = {card1, card2, card3};
 
 
         //建立物件cardMachine，屬性CardMachine
         CardMachine cardMachine = new CardMachine();
 
-        //用amount加總
-        int amount = cardMachine.getAmount(myCards);      //使用getAmount方法，呼叫myCards
-        //int amount = cardMachine.getAmount(new IcCard[] {card1,card2,card3});
 
-        //用getAmount方法，返回值後
-        System.out.println(amount);
+        int total = cardMachine.getAmount(myCards);
+        //亦同 ---> int total = cardMachine.getAmount(new IcCard[] {card1,card2,card3});
 
-        card2.showInfo();
+        //用total當容器加總myCards的money
+        //使用getAmount方法，把陣列myCards丟進去
+        //並把返回值放進total
 
-
-
-
+        System.out.println(total);
     }
 }
