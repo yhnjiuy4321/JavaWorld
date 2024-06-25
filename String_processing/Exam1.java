@@ -27,7 +27,6 @@ public class Exam1 {
         }
         else {
             System.out.print("長度至少要為6!!");
-
         }
     }
 }

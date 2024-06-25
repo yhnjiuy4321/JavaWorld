@@ -17,6 +17,7 @@ public class Exam2 {
         if(word.length()>=6){//字串長度若大於等於6
             if((begin>=0)&&(end>0)&&(end>begin)) {//end要比begin還要後面
                 String sub = word.substring(begin, end+1);
+                //substring:截取字串
                 //the range of substring:
                 //beginIndex---the beginning index,inclusive.
                 //endIndex---the ending index, exclusive.(the reason about why end+1)
@@ -26,7 +27,8 @@ public class Exam2 {
             else {
                 System.out.println("無此字串");
             }
-
+        }else {
+            System.out.println("長度至少要為6!!");
         }
     }
 }
