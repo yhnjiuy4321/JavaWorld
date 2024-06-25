@@ -7,8 +7,6 @@ public class person {
         this.id = id;
     }
 
-
-
     public void setId(String id) {
         this.id = id;
     }
@@ -17,15 +15,11 @@ public class person {
         return id;
     }
 
-
     protected int age;
 
     protected void sayHi() {
-        System.out.println("hi AAA");
+        System.out.println("hi everyone!");
     }
-
-
-
 }
 
 

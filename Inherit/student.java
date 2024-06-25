@@ -13,7 +13,7 @@ public class student extends person{
 
     @Override
     protected void sayHi() {
-        super.sayHi();
-        System.out.println("hi"+getId());
+        //super.sayHi();
+        System.out.println("hi,teacher!");
     }
 }

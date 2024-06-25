@@ -13,20 +13,23 @@ public class Car extends Vehicle {
         return color;
     }
 
-
+    @Override
+    public String toString() {
+        return "Car{" +
+                "color='" + color + '\'' +
+                '}';
+    }
 }
 
 /*
 super()用來呼叫父類變數使用
 父的容器中有幾個變數，子容器就一定至少要有那幾個(只能多不能少)
 
-
 以下舉例:
 public 父類(String aaa ,int bbb) {
      this.aaa = aaa;
      this.bbb = bbb;
 }
-
 private final String color;
 public 子類(String aaa, int bbb,double ccc) {
     super(aaa,bbb);// 呼叫父類的構造器(父類有aaa,bbb，所以子類一定要有aaa,bbb)
@@ -36,4 +39,5 @@ public 子類(String aaa, int bbb,double ccc) {
 如果set/get(或其他方法)，「aaa,bbb」要在父類裡建置，「ccc」則在子類自己裡面建置
 
 protect建置於父類，只有子類或同一套件可以取而用之
+(記:爸爸保護家產，所以只有後代可以用爸爸的東西，其他人不行)
  */
