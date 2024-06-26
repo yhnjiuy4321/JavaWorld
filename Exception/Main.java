@@ -17,11 +17,13 @@ public class Main {
             double bmi;
             try {
                 bmi = AAA.getBmi(weight, height);
-                System.out.println("your bmi is:" + bmi);
+                System.out.printf("your bmi is: %.2f",bmi);
                 break;
-            } catch (InvalidBmiNumException e) {//要有BmiUtil中的例外才能catch，也就是要有throw new InvalidBmiNumException("Error:Height value is invalid");
+            } catch (InvalidBmiNumException e) {
+            //要有BmiUtil中的例外才能catch，也就是要有throw new InvalidBmiNumException("Error:Height value is invalid");
+
                 System.out.println(e.getMessage());
-                //這裡的e.getMessage()是取得例外的訊息，會輸出"Error:Height value is invalid"，因為在InvalidBmiNumException裡面有寫
+                //這裡的e.getMessage()是取得例外的訊息，會輸出"Error:Height value is invalid"，因為在BmiUtil中throw new InvalidBmiNumException("Error:Height value is invalid");
                 System.out.println("Please input again");
             }
             //也可以直接在main裡面寫try/catch

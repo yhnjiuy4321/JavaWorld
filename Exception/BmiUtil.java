@@ -1,6 +1,7 @@
 public class BmiUtil {
 
     public double getBmi(String strweight,String strheight) throws InvalidBmiNumException{
+
         double weight = 0;
         double height = 0;
 
@@ -32,8 +33,10 @@ public class BmiUtil {
         double height = Double.parseDouble(strheight);
         */
 
+        //如果有例外，就不會執行到這行，因為會直接跳到catch，之後再跳到finally，之後再跳到main
         height = height / 100;
         return weight / (height * height);//return也可以放進try裡面
+
    }
 }
 /*
