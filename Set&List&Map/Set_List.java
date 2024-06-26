@@ -38,7 +38,10 @@ public class Set_List {
             System.out.println(name);
         }
 
-        System.out.println(name3.contains("123"));//判斷Set中是否有123
+        System.out.println(name3.contains("123"));
+        //判斷Set中是否有123(無法如List用index判斷，只能用contains()方法判斷)
+        //或者將Set轉為List，再用List的方法判斷
+
 
 
         //以下是操作List的方法
@@ -53,12 +56,15 @@ public class Set_List {
             System.out.println(list);
         }
 
-
         list2.add("ㄅㄅㄅ");
         list2.add("ㄆㄆㄆ");
         list2.add("ㄇㄇㄇ");
-        list2.add("ㄇㄇㄇ");
 
+        //檢索元素
+        int index = list2.indexOf("ㄆㄆㄆ");//取得List中元素的索引
+        System.out.println("ㄆㄆㄆ的索引是:"+index);
+
+        //依序輸出
         System.out.println(list2.size());
         for (String list : list2) {
             System.out.println(list);

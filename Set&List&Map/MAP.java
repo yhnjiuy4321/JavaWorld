@@ -36,8 +36,8 @@ public class MAP {
         System.out.println("編號002的值:"+student3.get("002"));
         System.out.println("==========");
 
-        //依序輸出
 
+        //依序輸出
 
         //~方法一~
         Set<String> ids = student3.keySet();
@@ -91,5 +91,12 @@ containsKey(Object key)：判斷Map中是否有某key
 containsValue(Object value)：判斷Map中是否有某value
 clear()：清除Map中的元素
 isEmpty()：判斷Map是否為空
+
+Map.Entry的常用方法:
+getKey()：取得key
+getValue()：取得value
+setValue()：設定value
+equals(Object o)：判斷是否相等
+toString()：取得字串表示
 
  */
