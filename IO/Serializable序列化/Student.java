@@ -1,5 +1,6 @@
 import java.io.Serializable;
-//引入Serializable類別，用來序列化物件，使物件可以被序列化
+
+//引入Serializable類別，用來序列化物件，使物件可以被序列化，才能在不同的檔案中讀取或寫入物件
 
 public class Student implements Serializable {
 
