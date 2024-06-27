@@ -1,9 +1,7 @@
 public class TeaShop {
 
-    public void teaShop(Machine card,int money) {
+    public void teaShop(Machine card) {
 
-        card.withdraw();
-        card.pay();
-
+        card.pay(30);
     }
 }
