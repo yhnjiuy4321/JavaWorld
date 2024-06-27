@@ -14,22 +14,23 @@ public class OutputMain {
             String filename = br.readLine();
             System.out.println("檔名為:" + filename);
 
-            DataOutputStream dis = null;
-            try {
 
+            DataOutputStream dis = null;//
+            try {
                 //DataOutputStream dis = new DataOutputStream(new FileOutputStream(filename));
                 dis = new DataOutputStream(new FileOutputStream(filename));
+
                 int n = 10;
                 boolean isVaild = true;
                 dis.writeInt(n);
-                dis.writeBoolean(isVaild);
+                dis.writeBoolean(isVaild);//DataOutputStream.writeBoolean()方法將指定的布林值寫入輸出流中
                 dis.flush();
 
 
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             } finally {
-                if (dis != null) {
+                if (dis != null) {//若dis不為空值則執行 ---> 是指dis有實體，則執行以下程式碼
                     dis.close();
                 }
             }
